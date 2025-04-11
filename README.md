@@ -1,23 +1,11 @@
-# permission_handler_apple
+# Flutter permission_handler plugin
 
-[![pub package](https://img.shields.io/pub/v/permission_handler_apple.svg)](https://pub.dartlang.org/packages/permission_handler_apple) ![Build status](https://github.com/Baseflow/flutter-permission-handler/workflows/permission_handler_apple/badge.svg?branch=master) [![style: flutter lints](https://img.shields.io/badge/style-flutter_lints-40c4ff.svg)](https://pub.dev/packages/flutter_lints)
+The Flutter permission_handler plugin is build following the federated plugin architecture. A detailed explanation of the federated plugin concept can be found in the [Flutter documentation](https://flutter.dev/docs/development/packages-and-plugins/developing-packages#federated-plugins). This means the permission_handler plugin is separated into the following packages:
 
-The official iOS implementation of the [permission_handler](https://pub.dev/packages/permission_handler) plugin by [Baseflow](https://baseflow.com).
+1. [`permission_handler`][1]: the app facing package. This is the package users depend on to use the plugin in their project. For details on how to use the `permission_handler` plugin you can refer to its [README.md][2] file. At this moment the Android and iOS platform implementations are also part of this package. Additional platform support will be added in their own individual "platform package(s)".
+2. [`permission_handler_platform_interface`][3]: this packages declares the interface which all platform packages must implement to support the app-facing package. Instructions on how to implement a platform packages can be found in the [README.md][4] of the `permission_handler_platform_interface` package.
 
-## Usage
-
-Since version 9.1.0 of the [permission_handler](https://pub.dev/packages/permission_handler) plugin this is the endorsed iOS implementation. This means it will automatically be added to your dependencies when you depend on `permission_handler: ^9.1.0` in your applications pubspec.yaml.
-
-More detailed instructions on using the API can be found in the [README.md](../permission_handler/README.md) of the [permission_handler](https://pub.dev/packages/permission_handler) package.
-
-## Issues
-
-Please file any issues, bugs, or feature requests as an issue on our [GitHub](https://github.com/Baseflow/flutter-permission-handler/issues) page. Commercial support is available, you can contact us at <hello@baseflow.com>.
-
-## Want to contribute
-
-If you would like to contribute to the plugin (e.g. by improving the documentation, solving a bug, or adding a cool new feature), please carefully review our [contribution guide](../CONTRIBUTING.md) and send us your [pull request](https://github.com/Baseflow/flutter-permission-handler/pulls).
-
-## Author
-
-This permission_handler plugin for Flutter is developed by [Baseflow](https://baseflow.com).
+[1]: https://pub.dev/packages/permission_handler
+[2]: ./permission_handler/README.md
+[3]: https://pub.dev/packages/permission_handler_platform_interface
+[4]: ./permission_handler_platform_interface/README.md
